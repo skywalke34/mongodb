@@ -1,6 +1,6 @@
 name 'mongodb'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Tracy Walker'
+maintainer_email 'TracyFWalker@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures mongodb'
 long_description 'Installs/Configures mongodb'
@@ -11,10 +11,10 @@ chef_version '>= 12.14' if respond_to?(:chef_version)
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
 #
-# issues_url 'https://github.com/<insert_org_here>/mongodb/issues'
+issues_url 'https://github.com/skywalke34/mongodb/issues'
 
 # The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-# source_url 'https://github.com/<insert_org_here>/mongodb'
+source_url 'https://github.com/skywalke34/mongodb'
