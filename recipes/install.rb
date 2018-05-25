@@ -5,8 +5,6 @@
 # Author: Tracy Walker <TracyFWalker@gmail.com>
 # Chef Interview Project
 ##########################################################################
-#
-
 # Create a /etc/yum.repos.d/mongodb.repo file to hold the following configuration information for the MongoDB repository:
 #
 # If you are running a 64-bit system, use the following configuration:
@@ -27,22 +25,22 @@
 # file '/etc/yum.repos.d/mongodb.repo' do
 
 # Use Template to create yum repo file for mongodb
-cookbook_file '/etc/yum.repos.d/mongodb.repo' do
-  source 'mongodb.repo'
+
+template '/etc/yum.repos.d/mongodb.repo' do
+  source 'mongodb.repo.erb'
   owner 'root'
   group 'root'
   mode '0755'
-  action :create
 end
 
 
+
 # Install the MongoDB packages and associated tools.
-#
 # sudo yum install mongodb-org
 #
 yum_package 'mongodb-org' do
-
-
+  flush_cache( { :after => true } )
+end
 
 #
 # Start MongoDB.
@@ -55,7 +53,6 @@ yum_package 'mongodb-org' do
 # and then start the service.
 
 service 'mongod' do
-   supports :status => true, :restart => true, :reload => true
-   action :start
+  supports status: true, restart: true, reload: true
+  action :start
 end
-
