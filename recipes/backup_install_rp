@@ -1,4 +1,6 @@
-##########################################################################
+#BACKUP FILE - DO NOT USE!!
+
+#########################################################################
 # Cookbook Name:: mongodb
 # Recipe:: install
 #
@@ -123,7 +125,7 @@ if node[:mongodb][:key_file_content]
     backup false
     content node[:mongodb][:key_file_content]
   end
-end 
+end
 
 # Install the MongoDB packages and associated tools.
 # sudo yum install mongodb-org

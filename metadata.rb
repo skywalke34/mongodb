@@ -11,7 +11,6 @@ recipe 'mongodb::install', 'Installs and configures a mongos'
 
 %w(
   google
-  amazon
   centos
   redhat
   ubuntu
