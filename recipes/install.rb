@@ -33,13 +33,11 @@ template '/etc/yum.repos.d/mongodb.repo' do
   mode '0755'
 end
 
-
-
 # Install the MongoDB packages and associated tools.
 # sudo yum install mongodb-org
 #
 yum_package 'mongodb-org' do
-  flush_cache( { :after => true } )
+  flush_cache [ :after ]
 end
 
 #
